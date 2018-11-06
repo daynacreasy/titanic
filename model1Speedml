@@ -1,0 +1,7 @@
+from speedml import Speedml
+
+sml = Speedml('..\Users\dec3825\Desktop\Titanic Data\train.csv',
+               ..\Users\dec3825\Desktop\Titanic Data\test.csv',
+               target = 'Survived",
+               uid = 'PassengerId')
+sml.shape()
