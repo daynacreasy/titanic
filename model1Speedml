@@ -1,7 +1,35 @@
-from speedml import Speedml
+#imports for data analysis
+import pandas as pd
+import numpy as np
+import random as rnd
 
-sml = Speedml('..\Users\dec3825\Desktop\Titanic Data\train.csv',
-               ..\Users\dec3825\Desktop\Titanic Data\test.csv',
-               target = 'Survived",
-               uid = 'PassengerId')
-sml.shape()
+#imports for data visualization
+import seasborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+#imports for machine learning
+from sklearn.tree import DecisionTreeRegressor
+
+
+#data
+train = pd.read_csv('../input/train.csv')
+test = pd.read_csv('../input/test.csv')
+train_test = [train, test]
+
+print[train.columns.values]
+
+#decide which variables are categorical
+#Survived, Sex, Embarked, Pclass
+
+#decide which variables are numerical
+#Age, Fare, SibSp, Parch
+
+#preview the first few lines of data
+train.head()
+
+#Mixed data type variables:
+#Ticket is a mix of numeric/alphanumerica. Cabin is alphanumaric
+
+#look for variables that could possibly contain errors or typos
+#look for variables that could contain blank, null, or empty values
